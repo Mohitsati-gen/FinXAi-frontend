@@ -174,23 +174,7 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Product */}
-            <div>
-              <p className="finx-footer-col-label">Product</p>
-              <ul className="finx-footer-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#how-it-works">How it Works</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li>
-                  <Link
-                    to="/dashboard"
-                    style={{ color: "rgba(255,255,255,0.65)", textDecoration: "none", fontSize: "0.845rem" }}
-                  >
-                    Dashboard
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            
 
             {/* Legal */}
             <div>

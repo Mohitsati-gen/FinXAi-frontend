@@ -5,7 +5,7 @@ import axios from "axios";
 import { ArrowLeft } from "lucide-react";
 import Chart from "@/components/Chart";
 import StatsCards from "@/components/StatsCards";
-import TransactionTable from "@/components/Transactiontable";
+import TransactionTable from "@/components/TransactionTable";
 import { toast } from "sonner";
 import { useLocation } from "react-router-dom";
 

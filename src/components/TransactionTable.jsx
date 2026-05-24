@@ -501,8 +501,6 @@ export default function TransactionTable({ transactions, loading, onDelete, onEd
 </div>
           </div>
         )}
-      </div>
-
       {/* ══ Bulk Delete Confirm ══ */}
       {showConfirm && (
         <div className="modal-backdrop fixed inset-0 z-50 bg-black/25 backdrop-blur-sm flex items-center justify-center px-4" onClick={cancelDelete}>

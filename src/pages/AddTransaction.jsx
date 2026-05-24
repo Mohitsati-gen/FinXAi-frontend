@@ -354,7 +354,7 @@ export default function AddTransaction() {
                     min="0"
                     step="0.01"
                     required
-                    className="w-full border border-gray-200 rounded-xl pl-8 pr-4 py-3 text-sm text-gray-800 placeholder-gray-600 outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400/15 transition-all duration-150"
+                    className="w-full border border-gray-200 rounded-xl pl-8 pr-4 py-3 text-sm text-gray-800 placeholder-gray-300 outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400/15 transition-all duration-150"
                   />
                 </div>
               </div>
@@ -431,7 +431,7 @@ export default function AddTransaction() {
                   onClick={() => setCatOpen(o => !o)}
                   className="w-full flex items-center justify-between border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white hover:border-amber-300 outline-none transition-all duration-150"
                 >
-                  <span className={selectedCategory ? "text-gray-800 font-medium" : "text-gray-600"}>
+                  <span className={selectedCategory ? "text-gray-800 font-medium" : "text-gray-300"}>
                     {selectedCategory
                       ? <span className="flex items-center gap-2">{selectedCategory.emoji} {selectedCategory.value}</span>
                       : "Select category"
@@ -484,7 +484,7 @@ export default function AddTransaction() {
                 onChange={e => handleChange("description", e.target.value)}
                 placeholder="Add a note..."
                 rows={3}
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-600 outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400/15 transition-all duration-150 resize-none"
+                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-300 outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400/15 transition-all duration-150 resize-none"
               />
             </div>
 

@@ -203,45 +203,16 @@ export default function TransactionTable({ transactions, loading, onDelete, onEd
       <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
 
         {/* ══ Toolbar ══ */}
-        <div className="relative flex-1">
-
-  <Search
-    size={15}
-    strokeWidth={2.3}
-    className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500"
-  />
-
-  <input
-    value={search}
-    onChange={e => {
-      setSearch(e.target.value);
-      setPage(1);
-    }}
-    placeholder="Search transactions..."
-    className="
-      w-full
-      pl-10
-      pr-4
-      py-2.5
-      sm:py-3
-      text-sm
-      text-gray-800
-      bg-white
-      border
-      border-gray-300
-      rounded-xl
-      shadow-sm
-      outline-none
-      placeholder-gray-500
-      focus:border-amber-400
-      focus:ring-2
-      focus:ring-amber-400/15
-      transition-all
-      duration-200
-    "
-  />
-
-</div>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-100">
+          <div className="relative flex-1">
+            <Search size={13} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-300" />
+            <input
+              value={search}
+              onChange={e => { setSearch(e.target.value); setPage(1); }}
+              placeholder="Search transactions..."
+              className="w-full pl-9 pr-4 py-2 sm:py-2.5 text-xs sm:text-sm border border-gray-200 rounded-xl outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400/10 placeholder-gray-300 transition-all duration-150"
+            />
+          </div>
 
           <div className="flex items-center gap-2 self-end sm:self-auto flex-wrap sm:flex-nowrap">
             {selected.length > 0 && (
@@ -481,26 +452,19 @@ export default function TransactionTable({ transactions, loading, onDelete, onEd
               <span className="font-semibold text-gray-600">{totalPages}</span>
             </p>
             <div className="flex items-center gap-2">
-  
-  <button
-    onClick={() => setPage(p => Math.max(1, p - 1))}
-    disabled={page === 1}
-    className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl border border-gray-300 bg-white shadow-sm flex items-center justify-center text-gray-700 hover:border-amber-500 hover:bg-amber-50 hover:text-amber-600 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200"
-  >
-    <ChevronLeft size={16} strokeWidth={2.5} />
-  </button>
-
-  <button
-    onClick={() => setPage(p => Math.min(totalPages, p + 1))}
-    disabled={page === totalPages}
-    className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl border border-gray-300 bg-white shadow-sm flex items-center justify-center text-gray-700 hover:border-amber-500 hover:bg-amber-50 hover:text-amber-600 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200"
-  >
-    <ChevronRight size={16} strokeWidth={2.5} />
-  </button>
-
-</div>
+              <button onClick={() => setPage(p => Math.max(1, p-1))} disabled={page === 1}
+                className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg border border-gray-200 flex items-center justify-center text-gray-400 hover:border-amber-400 hover:text-amber-500 disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-150">
+                <ChevronLeft size={13} />
+              </button>
+              <button onClick={() => setPage(p => Math.min(totalPages, p+1))} disabled={page === totalPages}
+                className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg border border-gray-200 flex items-center justify-center text-gray-400 hover:border-amber-400 hover:text-amber-500 disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-150">
+                <ChevronRight size={13} />
+              </button>
+            </div>
           </div>
         )}
+      </div>
+
       {/* ══ Bulk Delete Confirm ══ */}
       {showConfirm && (
         <div className="modal-backdrop fixed inset-0 z-50 bg-black/25 backdrop-blur-sm flex items-center justify-center px-4" onClick={cancelDelete}>

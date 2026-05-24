@@ -1,16 +1,141 @@
-# React + Vite
+# FinXAI — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A luxury-designed personal finance dashboard with AI-powered insights, receipt scanning, and real-time budget tracking.
 
-Currently, two official plugins are available:
+🌐 **Live Demo**: [fin-x-ai-frontend-1.vercel.app](https://fin-x-ai-frontend-1.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Layer | Technology |
+|---|---|
+| Framework | React 18 + Vite |
+| Styling | Tailwind CSS + Custom CSS |
+| Auth | Clerk React |
+| HTTP Client | Axios |
+| UI Components | shadcn/ui |
+| Icons | Lucide React |
+| Notifications | Sonner |
+| Routing | React Router DOM v6 |
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- 🔐 **Authentication** — Clerk-powered sign in / sign up with protected routes
+- 🏦 **Account Management** — Add multiple accounts, set default, view balances
+- 💸 **Transaction Tracking** — Add, edit, delete transactions with category + type filters
+- 🧾 **AI Receipt Scanner** — Upload a receipt image → Gemini AI auto-fills transaction fields
+- 📊 **Budget Section** — Set monthly budgets with real-time progress bars and alerts
+- 🔁 **Recurring Transactions** — View and manage automated recurring entries
+- 📈 **Account Detail Page** — Per-account transaction history with income/expense breakdown
+- 📱 **Fully Responsive** — Optimized for mobile, tablet, and desktop
+- ✉️ **Monthly Report Emails** — AI-generated financial summaries delivered to inbox
+- 🎨 **Luxury UI Design** — Glass morphism navbar, gold accent system, smooth animations
+
+---
+
+## 📁 Project Structure
+
+```
+frontend/
+├── public/
+│   └── finxai-luxury.png
+├── src/
+│   ├── components/
+│   ├── lib/
+│   │   └── utils.js
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── Accountpage.jsx
+│   │   ├── AddTransaction.jsx
+│   │   ├── Signin.jsx
+│   │   ├── Signup.jsx
+│   │   ├── Privacypolicy.jsx
+│   │   └── Termsofservice.jsx
+│   ├── routes/
+│   │   └── AppRoutes.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── main.jsx
+│   └── index.css
+├── .env
+├── .gitignore
+├── vercel.json
+├── vite.config.js
+└── package.json
+```
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env` file in the root:
+
+```env
+VITE_CLERK_PUBLISHABLE_KEY=pk_test_xxx
+VITE_API_URL=https://your-backend.onrender.com
+```
+
+---
+
+## 🛠️ Local Setup
+
+```bash
+# Clone repo
+git clone https://github.com/yourusername/finxai-frontend.git
+cd finxai-frontend
+
+# Install dependencies
+npm install
+
+# Add environment variables
+cp .env.example .env
+
+# Run development server
+npm run dev
+```
+
+---
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+## 🚢 Deployment
+
+Deployed on **Vercel**.
+
+`vercel.json` handles SPA routing:
+
+```json
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
+```
+
+---
+
+## 📸 Screenshots
+
+> Add screenshots of Dashboard, Account Detail, Add Transaction, Budget, Receipt Scanner
+
+---
+
+## 🔗 Related
+
+- 🔧 [FinXAI Backend](https://github.com/yourusername/finxai-backend) — Express API + Inngest + Gemini AI
+
+---
+
+## 📄 License
+
+MIT

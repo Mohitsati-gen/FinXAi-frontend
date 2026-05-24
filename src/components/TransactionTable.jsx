@@ -204,7 +204,7 @@ export default function TransactionTable({ transactions, loading, onDelete, onEd
 
         {/* ══ Toolbar ══ */}
         <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-100">
-          <div className="relative flex-1">
+         <div className="relative flex-1">
 
   <Search
     size={16}
@@ -546,6 +546,7 @@ export default function TransactionTable({ transactions, loading, onDelete, onEd
     </div>
   </div>
 )}
+      </div>
 
       {/* ══ Bulk Delete Confirm ══ */}
       {showConfirm && (

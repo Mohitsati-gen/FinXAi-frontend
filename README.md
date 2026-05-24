@@ -122,17 +122,11 @@ Deployed on **Vercel**.
 }
 ```
 
----
 
-## 📸 Screenshots
-
-> Add screenshots of Dashboard, Account Detail, Add Transaction, Budget, Receipt Scanner
-
----
 
 ## 🔗 Related
 
-- 🔧 [FinXAI Backend](https://github.com/yourusername/finxai-backend) — Express API + Inngest + Gemini AI
+- 🔧 [FinXAI Backend](https://github.com/Mohitsati-gen/FinXAi-backend) — Express API + Inngest + Gemini AI
 
 ---
 

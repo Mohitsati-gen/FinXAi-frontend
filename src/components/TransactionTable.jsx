@@ -417,12 +417,25 @@ export default function TransactionTable({ transactions, loading, onDelete, onEd
                     </div>
 
                     {/* Amount — mobile right */}
-                    <div className="sm:hidden flex flex-col items-end shrink-0 ml-2">
-                      <p className={`text-xs font-bold ${isInc ? "text-emerald-600" : "text-red-500"}`}>
-                        {isInc ? "+" : "-"}₹{Math.abs(tx.amount).toLocaleString("en-IN", { minimumFractionDigits: 2 })}
-                      </p>
-                      <p className="text-[0.6rem] text-gray-400 mt-0.5">{tx.isRecurring ? "Recurring" : "One-time"}</p>
-                    </div>
+<div className="sm:hidden flex flex-col items-end shrink-0 ml-2">
+  <p className={`text-xs font-bold ${isInc ? "text-emerald-600" : "text-red-500"}`}>
+    {isInc ? "+" : "-"}₹{Math.abs(tx.amount).toLocaleString("en-IN", { minimumFractionDigits: 2 })}
+  </p>
+
+  <div className="flex items-center gap-2 mt-1">
+    <p className="text-[0.6rem] text-gray-400">
+      {tx.isRecurring ? "Recurring" : "One-time"}
+    </p>
+
+    {/* Mobile Edit Button */}
+    <button
+      onClick={() => openEdit(tx)}
+      className="w-6 h-6 rounded-full bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 active:scale-95 transition-all"
+    >
+      <Pencil size={11} />
+    </button>
+  </div>
+</div>
 
                     {/* Desktop columns */}
                     <p className="hidden sm:block text-sm text-gray-700 truncate">{tx.description}</p>

@@ -2,7 +2,7 @@
 
 > A luxury-designed personal finance dashboard with AI-powered insights, receipt scanning, and real-time budget tracking.
 
-🌐 **Live Demo**: [fin-x-ai-frontend-1.vercel.app](https://fin-x-ai-frontend-1.vercel.app)
+🌐 **Live Demo**: [fin-x-ai-frontend-1.vercel.app](https://finxaivercelapp.vercel.app/)
 
 ---
 
